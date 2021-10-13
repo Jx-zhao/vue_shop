@@ -17,7 +17,7 @@
             placeholder="请输入用户名"
             v-model="loginForm.username"
             clearable
-            prefix-icon="el-icon-user-solid"
+            prefix-icon="el-icon-s-custom"
           >
           </el-input>
         </el-form-item>

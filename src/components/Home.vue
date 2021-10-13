@@ -19,7 +19,7 @@
         <el-menu
           background-color="#333744"
           text-color="#fff"
-          active-text-color="#409eff"
+          active-text-color="#fd70a1"
           unique-opened
           :collapse = "isCollapse"
           :collapse-transition = "false"
@@ -96,7 +96,6 @@ export default {
       const { data: res } = await this.$http.get('menus')
       if (res.meta.status !== 200) return this.$message.error(res.meta.msg)
       this.menulist = res.data
-      console.log(res)
     },
     //点击按钮,切换菜单的折叠与展开
     toggleCollapse(){
