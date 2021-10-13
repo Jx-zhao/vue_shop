@@ -47,8 +47,8 @@
                       v-for="(item3, i3) in item2.children"
                       :key="item3.id"
                       closable
-                      @close="removeRightById(scope.row,item3.id)"
-                      >
+                      @close="removeRightById(scope.row, item3.id)"
+                    >
                       {{ item3.authName }}
                     </el-tag>
                   </el-col>
@@ -64,9 +64,15 @@
         <el-table-column label="操作" width="300px">
           <template>
             <!-- slot-scope="scope" -->
-            <el-button type="primary" icon="el-icon-edit" size="mini">编辑</el-button>
-            <el-button type="danger" icon="el-icon-delete" size="mini">删除</el-button>
-            <el-button type="warning" icon="el-icon-setting" size="mini">分配权限</el-button>
+            <el-button type="primary" icon="el-icon-edit" size="mini"
+              >编辑</el-button
+            >
+            <el-button type="danger" icon="el-icon-delete" size="mini"
+              >删除</el-button
+            >
+            <el-button type="warning" icon="el-icon-setting" size="mini"
+              >分配权限</el-button
+            >
           </template>
         </el-table-column>
       </el-table>
@@ -97,7 +103,7 @@ export default {
       this.rolelist = res.data
     },
     //根据ID删除对应的权限
-    async removeRightById(role,rightid) {
+    async removeRightById(role, rightid) {
       //弹框提示用户是否要删除
       const confirmResult = await this.$confirm(
         '此操作将永久删除该文件, 是否继续?',
@@ -111,11 +117,13 @@ export default {
       if (confirmResult !== 'confirm') {
         return this.$message.info('取消了删除!')
       }
-     const {data:res} = await this.$http.delete(`roles/${role.id}/rights/${rightid.id}`)
-     if(ref.meta.status !== 200){
-       return this.$message.error('删除权限失败!')
-     }
-     this.getRolesList()
+      const { data: res } = await this.$http.delete(
+        `roles/${role.id}/rights/${rightid.id}`
+      )
+      if (ref.meta.status !== 200) {
+        return this.$message.error('删除权限失败!')
+      }
+      this.getRolesList()
     }
   }
 }
