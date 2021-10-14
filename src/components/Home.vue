@@ -115,7 +115,7 @@ export default {
   height: 100%;
 }
 .el-header {
-  background-color: #373d41;
+  background: url('../assets/zhiganbg.png');
   display: flex;
   justify-content: space-between;
   padding-left: 0;
@@ -134,7 +134,7 @@ export default {
 }
 
 .el-aside {
-  background-color: #333744;
+  background:#333744 ;
   .el-menu{
     border-right: none;
   }

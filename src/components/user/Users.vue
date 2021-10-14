@@ -299,8 +299,7 @@ export default {
     },
     // 监听 switch 开关状态的改变
     async userStateChanged(userinfo) {
-      console.log(userinfo)
-      const { data: res } = await this.$http.put(
+      const { data: res} = await this.$http.put(
         `users/${userinfo.id}/state/${userinfo.mg_state}`
       )
       if (res.meta.status !== 200) {
