@@ -18,3 +18,11 @@ html,body,#app{
 .el-pagination{
   margin-top:15px;
 }
+.el-menu{
+    color: #fff;
+    background-color: transparent;
+  }
+.el-menu.el-menu--popup-right-start{
+  color: #fff;
+  background-color: #fff;
+}

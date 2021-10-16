@@ -15,10 +15,10 @@
         <!-- default-active="2"
       class="el-menu-vertical-demo"
       @open="handleOpen"
-      @close="handleClose" -->
+      @close="handleClose"
+                text-color="#fff"
+                background-color="#333744" -->
         <el-menu
-          background-color="#333744"
-          text-color="#fff"
           active-text-color="#fd70a1"
           unique-opened
           :collapse = "isCollapse"
@@ -134,9 +134,20 @@ export default {
 }
 
 .el-aside {
-  background:#333744 ;
+  background:url(../assets/zhiganbg.png)  ;
+  background-size: 200px;
   .el-menu{
     border-right: none;
+    .el-menu-item{
+      color:#fff;
+    }
+    .el-menu-item:hover{
+      color:#fd70a1;
+    }
+    .el-menu-item:hover i{
+      color:#fd70a1;
+    }
+    
   }
 }
 .el-main {
@@ -145,7 +156,12 @@ export default {
 body > .el-container {
   margin-bottom: 40px;
 }
-
+.el-submenu__title{
+  color:aliceblue;
+}
+.el-submenu__title:hover{
+  background-color: rgba(255, 255, 255, 0.6);
+}
 
 .toggle-button {
   background-color: #4a5064;
@@ -155,5 +171,14 @@ body > .el-container {
   text-align: center;
   letter-spacing: 0.2em;
   cursor: pointer;
+}
+</style>
+<style>
+.el-submenu__title{
+  color:aliceblue !important;
+}
+.el-submenu__title:hover{
+  color: #666 !important;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 </style>
