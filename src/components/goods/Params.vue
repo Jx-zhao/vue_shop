@@ -140,7 +140,6 @@
                   >+ New Tag</el-button>
               </template>
             </el-table-column>
-            </el-table-column>
             <!-- 索引列 -->
             <el-table-column type="index"></el-table-column>
             <el-table-column
