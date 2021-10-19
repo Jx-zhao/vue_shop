@@ -19,7 +19,7 @@
                 text-color="#fff"
                 background-color="#333744" -->
         <el-menu
-          active-text-color="#fd70a1"
+          active-text-color="#029ce1"
           unique-opened
           :collapse = "isCollapse"
           :collapse-transition = "false"
@@ -65,6 +65,7 @@
 </template>
 
 <script>
+  import {data} from "./Welcome.vue";
 export default {
   data() {
     return {
@@ -86,6 +87,7 @@ export default {
   created() {
     this.getMenuList()
     this.activePath = window.sessionStorage.getItem('activePath')
+    
   },
   methods: {
     logout() {
@@ -104,8 +106,8 @@ export default {
     //保存链接的激活状态
     saveNavState(activePath){
       window.sessionStorage.setItem('activePath',activePath);
-      this.activePath = activePath;      
-    }
+      this.activePath = activePath;
+    },
   }
 }
 </script>
@@ -142,10 +144,10 @@ export default {
       color:#fff;
     }
     .el-menu-item:hover{
-      color:#fd70a1;
+      color:#029ce1;
     }
     .el-menu-item:hover i{
-      color:#fd70a1;
+      color:#029ce1;
     }
     
   }
